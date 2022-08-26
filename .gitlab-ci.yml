@@ -13,7 +13,7 @@ build website:
   stage: build
   script:
     - npm install
-    - npm run build
+    - npx webpack
     - mkdir build
     - cp -r src/index.html build/app
     - cp -r dist build/dist

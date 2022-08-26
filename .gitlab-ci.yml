@@ -14,8 +14,10 @@ build website:
   script:
     - npm install
     - npm run build
-    - cp src/index.html app
-    - cp dist app
+    - mkdir build
+    - cp -r src/index.html build/app
+    - cp -r dist build/dist
+
   artifacts:
     name: "website-files"
     paths:

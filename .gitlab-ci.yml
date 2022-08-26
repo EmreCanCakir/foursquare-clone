@@ -15,7 +15,7 @@ build website:
     - npm install
     - npm run build
     - cp src/index.html app
-    - cp dist/main.js app
+    - cp dist app
   artifacts:
     name: "website-files"
     paths:

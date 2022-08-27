@@ -2,7 +2,7 @@ include:
   - "https://gitlab.piworks.net/devops/k8s-files/raw/master/.k8s-static-page.yml"
 
 variables:
-  K8S_STATIC_PAGE_PATH: "app"
+  K8S_STATIC_PAGE_PATH: "dist"
 
 stages:
   - build
@@ -13,15 +13,13 @@ build website:
   stage: build
   script:
     - npm install
-    - npx webpack
-    - mkdir build
-    - cp -r src/index.html build/app
-    - cp -r dist build/dist
+    - npm run build
+    - cp -r src/index.html dist
 
   artifacts:
     name: "website-files"
     paths:
-      - app
+      - dist
   tags:
     - linux
     - docker

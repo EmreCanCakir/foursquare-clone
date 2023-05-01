@@ -1,3 +1,3 @@
 # Foursquare Clone
 
-For Demo Page [Click Here](https://emrecancakir.netlify.app/)
+For Demo Page [Click Here](https://foursquare-clone.netlify.app/)
